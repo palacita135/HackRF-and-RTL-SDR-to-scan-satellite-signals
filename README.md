@@ -69,7 +69,7 @@ Enter your GPS coordinates.
 Select target satellite.
 Note the Doppler shift and adjust frequency accordingly.
 
-    ⚠️ Legal Disclaimer
+⚠️ Legal Disclaimer
     DO NOT TRANSMIT on satellite bands (FCC/ITU regulations).
     DO NOT DECRYPT encrypted military or commercial signals.
     DO NOT INTERFERE with licensed satellite operations.
