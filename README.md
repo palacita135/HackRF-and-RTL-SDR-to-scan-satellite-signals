@@ -28,7 +28,14 @@ Gunter’s Space Page (https://space.skyrocket.de/)
 N2YO (https://www.n2yo.com/) for live tracking
 🔹 Common Satellite Frequencies:
 
-    “| Satellite Type | Frequency Range | | --- | --- | | NOAA Weather | 137–138 MHz | | GOES Weather | 1.69 GHz | | Inmarsat L-Band | 1.54 GHz | | Iridium | 1.616 GHz | | GPS | 1.575 GHz | | Amateur Radio Sats | 145-146 MHz & 435-438 MHz | | ISS SSTV | 145.800 MHz |”
+    “| Satellite Type | Frequency Range | | --- | --- | 
+    | NOAA Weather | 137–138 MHz | 
+    | GOES Weather | 1.69 GHz | 
+    | Inmarsat L-Band | 1.54 GHz | 
+    | Iridium | 1.616 GHz | 
+    | GPS | 1.575 GHz | 
+    | Amateur Radio Sats | 145-146 MHz & 435-438 MHz | 
+    | ISS SSTV | 145.800 MHz |”
 
 📻 4. Receiving Signals
 Using RTL-SDR:
