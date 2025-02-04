@@ -169,19 +169,114 @@ Since satellites move fast, their signals shift in frequency due to the Doppler 
 
 🔹 Doppler Shift Formula:
 
-Δ
-𝑓
-=
-𝑣
-𝑐
-𝑓
-0
-Δf= 
-c
-v
+🛠️ Step 1: Choosing a Target Satellite
+First, decide what type of satellite signals you want to receive:
+
+Weather Satellites (NOAA, GOES) → Receives weather images
+Amateur Radio Sats (ISS, SO-50, AO-91) → APRS, SSTV, Voice
+Navigation Satellites (GPS, Galileo, GLONASS) → Positioning signals
+Communications Satellites (Inmarsat, Iridium) → L-band data, voice
+Use N2YO or Gpredict to track satellites and find their frequencies.
+
+📌 Recommended Tracking Tools:
+
+🔗 SatNOGS Database → Find active satellite frequencies
+🔗 N2YO → Live satellite tracking
+🔗 Gpredict → Predict satellite passes
+📡 Step 2: Setting Up Your Hardware
+For RTL-SDR (Beginner)
+✅ Works well for 137-138 MHz (NOAA Weather, Amateur Radio)
+✅ Affordable but limited to ~1.7 GHz max
+
+Required Equipment:
+
+RTL-SDR v3
+V-Dipole or Helical Antenna (for NOAA weather sats)
+Low-Noise Amplifier (LNA) (to boost weak signals)
+Band-Pass Filter (to remove interference)
+For HackRF (Advanced)
+✅ Covers a wider 1 MHz – 6 GHz range (L-band, S-band)
+✅ Can capture higher frequency signals (Inmarsat, Iridium, GPS)
+
+Required Equipment:
+
+HackRF One
+Helical, Yagi, or Parabolic Dish Antenna (depends on frequency)
+Bias-T LNA (e.g., NooElec SAWbird) for weak signals
+TCXO Module (reduces frequency drift)
+⚙️ Step 3: Installing SDR Software
+Choose software depending on your SDR and OS:
+
+📌 Windows:
+
+SDR# (SDRSharp) → Best for RTL-SDR
+WXtoImg → NOAA Weather decoding
+Orbitron → Real-time satellite tracking
+📌 Linux (ParrotOS, BlackArch):
+
+sudo apt install gqrx-sdr gnuradio gr-satellites sox
+SatDump → Powerful satellite signal decoder
+sudo apt install rtl-sdr hackrf (for SDR drivers)
+🛰️ Step 4: Receiving Satellite Signals
+🔹 NOAA Weather Satellites (137 MHz)
+1️⃣ Open GQRX or SDR#
+2️⃣ Set frequency to 137.1 - 137.9 MHz
+3️⃣ Choose Narrowband FM (NFM) mode
+4️⃣ Adjust gain & filter to reduce noise
+5️⃣ Save the audio file & decode with WXtoImg
+
+🎯 Example Frequencies:
+
+NOAA-18: 137.9125 MHz
+NOAA-19: 137.1000 MHz
+Meteor-M2 (Digital): 137.900 MHz
+🔹 ISS (International Space Station) SSTV & APRS
+SSTV Images: 145.800 MHz (Slow-Scan TV)
+APRS Packets: 145.825 MHz (Automatic Packet Reporting System)
+Use RX-SSTV to decode ISS images.
+
+🔹 L-Band Communications (1.5 – 1.7 GHz)
+Requires HackRF + LNA + SAW filter.
+
+📡 Common Signals:
+
+Inmarsat (1.54 GHz) → Maritime, aviation text messages
+Iridium (1.61 GHz) → Satellite phones
+GOES Weather (1.69 GHz) → High-resolution weather data
+📌 Software for Decoding:
+
+JAERO (Inmarsat ACARS decoding)
+SatDump (GOES satellite image decoding)
+🚀 Step 5: Tracking Doppler Shift
+Since satellites move fast, their signals shift in frequency due to the Doppler effect.
+
+🔹 Doppler Shift Formula:
+
+    Δ
+    𝑓
+    =
+    𝑣
+    𝑐
+    𝑓
+    0
+    Δf= 
+    c
+    v
 ​
- f 
-0
+     f 
+    0
+​
+ 
+Where:
+
+v = satellite speed (~7.8 km/s for LEO)
+c = speed of light
+f₀ = original frequency
+📌 Use Gpredict or Orbitron to auto-adjust SDR frequency.
+
+⚠️ Legal Considerations
+✅ Legal: Passive signal reception & analysis
+🚫 Illegal: Transmitting, decrypting private/military signals
 ​
  
 Where:
