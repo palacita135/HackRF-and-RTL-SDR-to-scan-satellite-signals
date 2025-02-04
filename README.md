@@ -42,32 +42,36 @@ You need satellite frequency data to know what signals to scan. Use:
 📻 4. Receiving Signals
 
 Using RTL-SDR:
-Connect your RTL-SDR and antenna.
-Open SDR# or GQRX.
-Set Frequency (e.g., 137 MHz for NOAA).
-Choose NFM (Narrowband FM) mode for voice/data or USB/LSB for weak signals.
-Adjust gain and filter settings to improve reception.
+
+    Connect your RTL-SDR and antenna.
+    Open SDR# or GQRX.
+    Set Frequency (e.g., 137 MHz for NOAA).
+    Choose NFM (Narrowband FM) mode for voice/data or USB/LSB for weak signals.
+    Adjust gain and filter settings to improve reception.
 
 Using HackRF:
-Open GNURadio or SDR#.
-Tune to higher frequency satellites (L-band, S-band).
-Use external LNA and filters for weak signals.
-Record and demodulate signals with GNURadio.
+
+    Open GNURadio or SDR#.
+    Tune to higher frequency satellites (L-band, S-band).
+    Use external LNA and filters for weak signals.
+    Record and demodulate signals with GNURadio.
 
 🌍 5. Decoding Satellite Signals
+
 Some satellites transmit raw telemetry, APRS, SSTV, or weather images.
 
-Weather Sats (NOAA/GOES): Use WXtoImg to decode images.
-APRS (Amateur Packet Reporting System): Use Direwolf or Multimon-NG.
-SSTV (Slow Scan TV from ISS): Use RX-SSTV to decode images.
-Inmarsat L-band (Marine, Aviation Data): Use JAERO.
+    Weather Sats (NOAA/GOES): Use WXtoImg to decode images.
+    APRS (Amateur Packet Reporting System): Use Direwolf or Multimon-NG.
+    SSTV (Slow Scan TV from ISS): Use RX-SSTV to decode images.
+    Inmarsat L-band (Marine, Aviation Data): Use JAERO.
 
 🛰️ 6. Real-Time Satellite Tracking
-Use Orbitron or Gpredict to predict satellite passes over your location.
 
-Enter your GPS coordinates.
-Select target satellite.
-Note the Doppler shift and adjust frequency accordingly.
+    Use Orbitron or Gpredict to predict satellite passes over your location.
+
+    Enter your GPS coordinates.
+    Select target satellite.
+    Note the Doppler shift and adjust frequency accordingly.
 
 ⚠️ Legal Disclaimer
 
